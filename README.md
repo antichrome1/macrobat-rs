@@ -5,7 +5,7 @@ function-like syntax.
 
 ## Example Usage
 
-Add `macrobat = "0.9.0"` to your dev dependencies in Cargo.toml.
+Add `macrobat = "0.9.3"` to your dev dependencies in Cargo.toml.
 
 my_macros.rs:
 ```rust
