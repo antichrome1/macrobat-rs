@@ -1,0 +1,32 @@
+[package]
+name          = "macrobat"
+version       = "0.9.3"
+description   = "A DSL for writing legible single-arm declartive macros."
+authors       = ["Aditya Singh <antichrome1@proton.me>"]
+documentation = "https://docs.rs/macrobat/"
+homepage      = "https://crates.io/crates/macrobat"
+repository    = "https://github.com/antichrome1/macrobat-rs"
+edition       = "2024"
+license       = "ISC"
+readme        = "README.md"
+keywords      = ["macro", "proc-macro"]
+categories    = ["rust-patterns", "development-tools"]
+exclude       = ["justfile"]
+
+[dependencies]
+proc-macro2 = "1"
+quote       = "1"
+syn         = { version = "3", features = ["full"] }
+
+[profile.release]
+strip         = true
+opt-level     = 3
+lto           = true
+codegen-units = 1
+debug         = false
+panic         = 'unwind'
+
+[lib]
+name       = "macrobat"
+path       = "macrobat.rs"
+proc-macro = true
