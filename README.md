@@ -10,7 +10,6 @@ function-like syntax.
 
 ## Example Usage
 
-my_macros.rs:
 ```rust
 use macrobat::macros;
 
@@ -31,20 +30,13 @@ macros! {
     } @export @wrap
 
 }
-```
 
-main.rs:
-```rust
-#[path = "my_macros.rs"]
-pub mod my_macros;
-
-fn main() {
-    println!("{}", add!(1, 2));
-    println!("{}", collatz_steps!(27));
-}
+assert_eq!(3, add!(1, 2));
+assert_eq!(111, collatz_steps!(27));
 ```
 
 ## Metadata
 
 License: ISC
 Contact: <antichrome1@proton.me>
+Repository: https://github.com/antichrome1/macrobat-rs

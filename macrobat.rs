@@ -1,5 +1,4 @@
-//! A DSL for writing legible single-arm declartive macros
-
+#![doc = include_str!("README.md")]
 #![forbid(unsafe_code)]
 
 use quote::quote;
