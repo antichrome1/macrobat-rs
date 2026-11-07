@@ -26,6 +26,10 @@ macros! {
 fib!(10);
 ```
 
+NOTE: macrobat exports a procedural macro.  If you'd rather keep proc
+macros out of your dependency tree and build process, take that into
+account.
+
 ## License
 
 ISC
