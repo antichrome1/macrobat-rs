@@ -1,35 +1,31 @@
 # macrobat
 
-Define multiple single-arm rust declarative macros in a familiar
-function-like syntax.
+This library aims to reduce the cognitive overhead of reading and
+writing single-arm declarative macros, so you can spend your energy on
+what your macro actually does.
 
-`macrobat` aims to reduce the cognitive overhead of reading and
-writing single arm declarative macros.
-
-## Example Usage
+With macrobat, you can define multiple single-arm declarative macros
+in a familiar function-like syntax like so:
 
 ```rust
-use macrobat::macros;
-
 macros! {
-
-    macro collatz_steps($x:expr) {
-        let mut n = $x;
-        let mut steps = 0u64;
-        while n > 1 {
-            n = if n % 2 == 0 { n / 2 } else { 3 * n + 1 };
-            steps += 1;
+     
+    macro fib($x:expr) {
+        let (mut a, mut b) = (0u64, 1u64);
+        for _ in 0..n {
+            (a, b) = (b, a + b);
         }
-        steps
+        a
     } @export @wrap
+
+    // add more macros here
 
 }
 
-assert_eq!(111, collatz_steps!(27));
+// Call the macro like you usually would
+fib!(10);
 ```
 
-## Metadata
+## License
 
-License: ISC <br>
-Contact: <antichrome1@proton.me> <br>
-Repository: https://github.com/antichrome1/macrobat-rs
+ISC

@@ -1,4 +1,7 @@
-#![doc = include_str!("README.md")]
+//! A DSL for writing legible single-arm declarative macros.
+//!
+//! See [`macro@macros`].
+
 #![forbid(unsafe_code)]
 
 use quote::quote;
@@ -76,8 +79,7 @@ impl Parse for Definitions {
     }
 }
 
-/// Define multiple single-arm rust declarative macros in a familiar
-/// function-like syntax
+/// Define multiple single-arm declarative macros in a `fn` like syntax
 ///
 /// - `@wrap` wraps your code block in braces, which is useful when you
 ///   have multiple statements to do some computation and then return a
