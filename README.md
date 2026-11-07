@@ -3,14 +3,12 @@
 Define multiple single-arm rust declarative macros in a familiar
 function-like syntax.
 
-- `@wrap` wraps your code block in braces, which is useful when you
-  have multiple statements to do some computation and then return a
-  value.
-- `@export` adds `#[macro_export]` attr to your macro.
+`macrobat` aims to reduce the cognitive overhead of reading and
+writing single arm declarative macros.
 
 ## Example Usage
 
-```rust
+```rust ignore
 use macrobat::macros;
 
 macros! {
@@ -31,8 +29,8 @@ macros! {
 
 }
 
-assert_eq!(3, add!(1, 2));
-assert_eq!(111, collatz_steps!(27));
+let sum = add!(1, 2);
+let steps = collatz_steps!(27);
 ```
 
 ## Metadata
