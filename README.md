@@ -8,14 +8,10 @@ writing single arm declarative macros.
 
 ## Example Usage
 
-```rust ignore
+```rust
 use macrobat::macros;
 
 macros! {
-
-    macro add($x:expr, $y:expr) {
-        $x + $y
-    } @export
 
     macro collatz_steps($x:expr) {
         let mut n = $x;
@@ -29,8 +25,7 @@ macros! {
 
 }
 
-let sum = add!(1, 2);
-let steps = collatz_steps!(27);
+assert_eq!(111, collatz_steps!(27));
 ```
 
 ## Metadata

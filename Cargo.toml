@@ -1,6 +1,6 @@
 [package]
 name          = "macrobat"
-version       = "0.9.0"
+version       = "0.9.1"
 description   = "A DSL for writing legible single-arm declartive macros."
 authors       = ["Aditya Singh <antichrome1@proton.me>"]
 documentation = "https://docs.rs/macrobat/"
