@@ -35,6 +35,6 @@ let steps = collatz_steps!(27);
 
 ## Metadata
 
-License: ISC
-Contact: <antichrome1@proton.me>
+License: ISC <br>
+Contact: <antichrome1@proton.me> <br>
 Repository: https://github.com/antichrome1/macrobat-rs
