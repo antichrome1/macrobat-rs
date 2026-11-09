@@ -1,8 +1,8 @@
+#![forbid(unsafe_code)]
+
 //! A DSL for writing legible single-arm declarative macros.
 //!
 //! See [`macro@macros`].
-
-#![forbid(unsafe_code)]
 
 use quote::quote;
 use syn::{
@@ -85,6 +85,7 @@ impl Parse for Definitions {
 ///   have multiple statements to do some computation and then return a
 ///   value.
 /// - `@export` adds `#[macro_export]` attr to your macro.
+/// - `macro` keyword is optional.
 ///
 /// # Example
 /// ```

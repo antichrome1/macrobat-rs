@@ -28,5 +28,5 @@ panic         = 'unwind'
 
 [lib]
 name       = "macrobat"
-path       = "macrobat.rs"
+path       = "src/macrobat.rs"
 proc-macro = true
